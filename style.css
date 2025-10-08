@@ -18,3 +18,40 @@ Update URI: false
 header {
     position: sticky;
 }
+
+/* Home Page styles */
+
+.wp-block-group.image-grid-home {
+    max-height: 25rem;
+
+}
+
+.wp-block-group.image-grid-home figure {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+}
+
+.wp-block-group.image-grid-home figure img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.square-before {
+    display: flex;
+    align-items: center;
+}
+
+.square-before::before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin: 1rem;
+    background-color: #ffffff;
+
+
+}

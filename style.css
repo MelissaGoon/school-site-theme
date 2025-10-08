@@ -14,3 +14,7 @@ Text Domain: school-site-theme
 Tags: 
 Update URI: false
 */
+
+header {
+    position: sticky;
+}

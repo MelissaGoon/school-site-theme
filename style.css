@@ -52,6 +52,15 @@ header {
     height: 1rem;
     margin: 1rem;
     background-color: #ffffff;
+}
 
+.info-2-text {
+    flex-basis: 600px;
+}
+
+@media (min-width: 70.25em) {
+    .info-2-text {
+        flex-basis: 400px;
+    }
 
 }

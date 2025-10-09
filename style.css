@@ -26,13 +26,15 @@ header {
 
 }
 
-.wp-block-group.image-grid-home figure {
+.wp-block-group.image-grid-home figure,
+.wp-block-group.activities-grid figure {
     display: block;
     height: 100%;
     overflow: hidden;
 }
 
-.wp-block-group.image-grid-home figure img {
+.wp-block-group.image-grid-home figure img,
+.wp-block-group.activities-grid figure img {
     display: block;
     height: 100%;
     width: 100%;
@@ -61,6 +63,35 @@ header {
 @media (min-width: 70.25em) {
     .info-2-text {
         flex-basis: 400px;
+    }
+
+}
+
+.wp-block-group.activities-grid {
+    height: 22rem;
+    align-items: center;
+}
+
+.wp-block-group.activities-grid .activities-text {
+    height: fit-content;
+}
+
+@media (max-width: 54em) {
+    .wp-block-group.activities-grid {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 3rem;
+    }
+
+    .wp-block-group.activities-grid figure {
+        height: 300px;
+        width: 100%;
+    }
+
+    .wp-block-group.activities-grid .activities-text {
+        padding: 1rem;
+        order: 2;
     }
 
 }

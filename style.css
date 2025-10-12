@@ -37,6 +37,10 @@ div.entry-content.homepage-content {
     overflow: hidden;
 }
 
+.wp-block-group.image-grid-home figure {
+    max-height: 25rem;
+}
+
 .wp-block-group.image-grid-home figure img,
 .wp-block-group.activities-grid figure img {
     display: block;

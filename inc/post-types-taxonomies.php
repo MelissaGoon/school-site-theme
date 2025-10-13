@@ -50,8 +50,68 @@ function school_register_custom_post_types()
         'menu_position'      => 4,
         'menu_icon'          => 'dashicons-groups',
         'supports'           => array('title', 'editor', 'thumbnail'),
+        'template' => array(
+            array(
+                'core/post-featured-image'
+            ),
+            array(
+                'core/heading',
+                array(
+                    'placeholder' => 'Add Job Title',
+                )
+            ),
+            array(
+                'core/paragraph',
+                array(
+                    'placeholder' => 'Add Email',
+                )
+            ),
+        ),
+        'template_lock'      => 'contentOnly'
     );
 
     register_post_type('fwd-school-staff', $args);
 }
 add_action('init', 'school_register_custom_post_types');
+
+
+function school_register_taxonomies()
+{
+    // Staff Deparment Taxonomy
+    $labels = array(
+        'name' => _x('Departments', 'taxonomy general name', 'school-site-theme'),
+        'singular_name' => _x('Department', 'taxonomy singular name', 'school-site-theme'),
+        'search_items' => __('Search Departments', 'school-site-theme'),
+        'all_items' => __('All Departments', 'school-site-theme'),
+        'parent_item' => __('Parent Department', 'school-site-theme'),
+        'parent_item_colon' => __('Parent Department:', 'school-site-theme'),
+        'edit_item' => __('Edit Department', 'school-site-theme'),
+        'view_item' => __('View Department', 'school-site-theme'),
+        'update_item' => __('Update Department', 'school-site-theme'),
+        'add_new_item' => __('Add New Department', 'school-site-theme'),
+        'new_item_name' => __('New Department Name', 'school-site-theme'),
+        'template_name' => __('Department Archives', 'school-site-theme'),
+        'menu_name' => __('Department', 'school-site-theme'),
+        'not_found' => __('No departments found.', 'school-site-theme'),
+        'no_terms' => __('No departments', 'school-site-theme'),
+        'items_list_navigation' => __('Departments list navigation', 'school-site-theme'),
+        'items_list' => __('departments list', 'school-site-theme'),
+        'item_link' => __('Department Link', 'school-site-theme'),
+        'item_link_description' => __('A link to a department.', 'school-site-theme'),
+    );
+
+    // Hierarchical because they might want sub-departments in the future
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menu' => true,
+        'show_in_rest' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'departments'),
+    );
+    register_taxonomy('fwd-staff-department', array('fwd-school-staff'), $args);
+}
+add_action('init', 'school_register_taxonomies');

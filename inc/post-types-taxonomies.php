@@ -100,7 +100,7 @@ function school_register_taxonomies()
         'item_link_description' => __('A link to a department.', 'school-site-theme'),
     );
 
-    // Hierarchical because they might want sub-departments in the future
+    // Hierarchical for ui reasons
     $args = array(
         'hierarchical' => true,
         'labels' => $labels,
@@ -111,6 +111,12 @@ function school_register_taxonomies()
         'show_admin_column' => true,
         'query_var' => true,
         'rewrite' => array('slug' => 'departments'),
+        'capabilities' => array(
+            'manage_terms' => 'do_not_allow',
+            'edit_terms'   => 'do_not_allow',
+            'delete_terms' => 'do_not_allow',
+            'assign_terms' => 'edit_posts',
+        ),
     );
     register_taxonomy('fwd-staff-department', array('fwd-school-staff'), $args);
 }

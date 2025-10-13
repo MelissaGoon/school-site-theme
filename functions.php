@@ -62,3 +62,18 @@ function school_setup()
 	add_editor_style(get_stylesheet_uri());
 }
 add_action('after_setup_theme', 'school_setup');
+
+
+// Changing staff CPT title placeholder text
+// Adapted from: https://imtiazrayhan.com/how-to-replace-add-title-placeholder-text-in-wordpress/ 
+function replace_title_placeholder($title)
+{
+	$screen = get_current_screen();
+
+	if ("fwd-school-staff" == $screen->post_type) {
+		$title = "Add Staff Name";
+	}
+
+	return $title;
+}
+add_filter("enter_title_here", "replace_title_placeholder");

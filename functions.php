@@ -1,5 +1,8 @@
 <?php
 
+/*** Custom Post Types & Custom Taxonomies */
+require get_template_directory() . '/inc/post-types-taxonomies.php';
+
 function school_enqueues()
 {
 	// LOAD NORMALIZE.CSS (OR OTHER CSS FILES)

@@ -348,7 +348,7 @@
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--montserrat)",
 			"fontSize": "16px",
-			"lineHeight": "1.5"
+			"lineHeight": "2"
 		}
 	},
 	"templateParts": [

@@ -52,18 +52,17 @@ function school_register_custom_post_types()
         'supports'           => array('title', 'editor', 'thumbnail'),
         'template' => array(
             array(
-                'core/post-featured-image'
-            ),
-            array(
-                'core/heading',
+                'core/paragraph',
                 array(
                     'placeholder' => 'Add Job Title',
+                    'className' => 'staff-job-title',
                 )
             ),
             array(
                 'core/paragraph',
                 array(
                     'placeholder' => 'Add Email',
+                    'className' => 'staff-email',
                 )
             ),
         ),

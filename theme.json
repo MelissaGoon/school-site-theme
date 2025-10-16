@@ -273,6 +273,34 @@
 					"fontStyle": "normal",
 					"fontWeight": "800",
 					"textTransform": "uppercase"
+				},
+				"border": {
+					"width": "2px",
+					"style": "solid",
+					"color": "transparent"
+				},
+				":active": {
+					"border": {
+						"width": "2px",
+						"style": "solid",
+						"color": "var(--wp--preset--color--white)"
+					},
+					"shadow": "var( --wp--preset--shadow--outlined )"
+				},
+				":focus": {
+					"border": {
+						"width": "2px",
+						"style": "solid",
+						"color": "var(--wp--preset--color--white)"
+					},
+					"shadow": "var( --wp--preset--shadow--outlined )"
+				},
+				":hover": {
+					"border": {
+						"width": "2px",
+						"style": "solid",
+						"color": "var(--wp--preset--color--white)"
+					}
 				}
 			},
 			"caption": {
@@ -331,8 +359,25 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--montserrat)",
 					"fontSize": "1rem",
-					"fontStyle": "italic",
+					"fontStyle": "normal",
 					"fontWeight": "300"
+				},
+				":active": {
+					"typography": {
+						"textDecoration": "underline",
+						"fontStyle": "italic"
+					}
+				},
+				":focus": {
+					"typography": {
+						"textDecoration": "underline",
+						"fontStyle": "italic"
+					}
+				},
+				":hover": {
+					"typography": {
+						"textDecoration": "underline"
+					}
 				}
 			}
 		},

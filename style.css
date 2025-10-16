@@ -103,3 +103,16 @@ div.entry-content.homepage-content {
     }
 
 }
+
+.apply-now-link a {
+    font-weight: 800;
+    background-color: #27344d;
+
+
+    padding: 0.5rem 1rem;
+    border-radius: 500px;
+}
+
+.wp-block-navigation .apply-now-link .wp-block-navigation-item__content.wp-block-navigation-item__content {
+    color: #ffffff;
+}

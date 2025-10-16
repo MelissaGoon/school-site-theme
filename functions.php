@@ -3,6 +3,10 @@
 /*** Custom Post Types & Custom Taxonomies */
 require get_template_directory() . '/inc/post-types-taxonomies.php';
 
+// Load custom blocks.
+require get_theme_file_path() . '/school-site-blocks/school-site-blocks.php';
+
+
 function school_enqueues()
 {
 	// LOAD NORMALIZE.CSS (OR OTHER CSS FILES)
@@ -52,6 +56,30 @@ function school_enqueues()
 			'all'
 		);
 	}
+
+	// Load Animate on Scroll JS and CSS
+	wp_enqueue_script(
+		'aos-script',
+		'https://unpkg.com/aos@2.3.1/dist/aos.js',
+		array(),
+		'2.3.1',
+		array('strategy' => 'defer')
+	);
+
+	wp_enqueue_script(
+		'aos-settings',
+		get_theme_file_uri('assets/js/aosSettings.js'),
+		array(),
+		'2.3.1',
+		array('strategy' => 'defer')
+	);
+
+	wp_enqueue_style(
+		'aos-css',
+		'https://unpkg.com/aos@2.3.1/dist/aos.css',
+		array(),
+		'2.3.1'
+	);
 }
 add_action('wp_enqueue_scripts', 'school_enqueues');
 

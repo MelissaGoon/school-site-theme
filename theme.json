@@ -264,6 +264,34 @@
 		},
 		"elements": {
 			"button": {
+				":active": {
+					"border": {
+						"color": "var(--wp--preset--color--white)",
+						"style": "solid",
+						"width": "2px"
+					},
+					"shadow": "var( --wp--preset--shadow--outlined )"
+				},
+				":focus": {
+					"border": {
+						"color": "var(--wp--preset--color--white)",
+						"style": "solid",
+						"width": "2px"
+					},
+					"shadow": "var( --wp--preset--shadow--outlined )"
+				},
+				":hover": {
+					"border": {
+						"color": "var(--wp--preset--color--white)",
+						"style": "solid",
+						"width": "2px"
+					}
+				},
+				"border": {
+					"color": "transparent",
+					"style": "solid",
+					"width": "2px"
+				},
 				"color": {
 					"background": "var(--wp--preset--color--custom-color-5)",
 					"text": "var(--wp--preset--color--white)"
@@ -273,34 +301,6 @@
 					"fontStyle": "normal",
 					"fontWeight": "800",
 					"textTransform": "uppercase"
-				},
-				"border": {
-					"width": "2px",
-					"style": "solid",
-					"color": "transparent"
-				},
-				":active": {
-					"border": {
-						"width": "2px",
-						"style": "solid",
-						"color": "var(--wp--preset--color--white)"
-					},
-					"shadow": "var( --wp--preset--shadow--outlined )"
-				},
-				":focus": {
-					"border": {
-						"width": "2px",
-						"style": "solid",
-						"color": "var(--wp--preset--color--white)"
-					},
-					"shadow": "var( --wp--preset--shadow--outlined )"
-				},
-				":hover": {
-					"border": {
-						"width": "2px",
-						"style": "solid",
-						"color": "var(--wp--preset--color--white)"
-					}
 				}
 			},
 			"caption": {
@@ -353,6 +353,23 @@
 				}
 			},
 			"link": {
+				":active": {
+					"typography": {
+						"fontStyle": "italic",
+						"textDecoration": "underline"
+					}
+				},
+				":focus": {
+					"typography": {
+						"fontStyle": "italic",
+						"textDecoration": "underline"
+					}
+				},
+				":hover": {
+					"typography": {
+						"textDecoration": "underline"
+					}
+				},
 				"color": {
 					"text": "var(--wp--preset--color--custom-color-6)"
 				},
@@ -361,23 +378,6 @@
 					"fontSize": "1rem",
 					"fontStyle": "normal",
 					"fontWeight": "300"
-				},
-				":active": {
-					"typography": {
-						"textDecoration": "underline",
-						"fontStyle": "italic"
-					}
-				},
-				":focus": {
-					"typography": {
-						"textDecoration": "underline",
-						"fontStyle": "italic"
-					}
-				},
-				":hover": {
-					"typography": {
-						"textDecoration": "underline"
-					}
 				}
 			}
 		},

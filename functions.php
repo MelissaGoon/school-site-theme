@@ -105,3 +105,9 @@ function replace_title_placeholder($title)
 	return $title;
 }
 add_filter("enter_title_here", "replace_title_placeholder");
+
+// Restrict locking/ unlocking blocks to those with theme editing privelleges 
+add_filter('block_editor_settings_all', function ($settings) {
+	$settings['canLockBlocks'] = current_user_can('edit_theme_options');
+	return $settings;
+});
